@@ -17,7 +17,7 @@ const token = '#';
 client.on('ready', () => {
   console.log(`Bot está logado como ${client.user.tag}`);
   const guild = client.guilds.cache.get('1102194865544102042'); // ID do servidor
-  //fetchJsonDataPeriodically(guild, client); // BUSCA PERIODICA DE TIMES NO JSON
+  fetchJsonDataPeriodically(guild, client); // BUSCA PERIODICA DE TIMES NO JSON
   adminfuncoes(client); //CHAMA FUNCOES DE ADMIN
   setupFreeAgentInteraction(client); //CHAMA A FUNCAO DE freeAgent
   cadastro(client); //CHAMA A FUNCAO DE cadastro do usuario cadastrado no site no discord e verifica se ele está cadastrado no campeonato
