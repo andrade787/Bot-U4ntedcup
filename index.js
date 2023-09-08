@@ -27,9 +27,9 @@ client.on('ready', () => {
 
 
 
-// Função para enviar a mensagem embed com o botão "Ficar Free Agent"
+
 async function sendFreeAgentEmbed(client) {
-  const channelId = '1149524165766942740'; // Substitua pelo ID do canal desejado
+  const channelId = '1149524165766942740'; 
 
   const embed = new MessageEmbed()
     .setTitle('VOCÊ ESTÁ FREE AGENT PROCURANDO UM TIME ?')
@@ -38,7 +38,7 @@ async function sendFreeAgentEmbed(client) {
     .setImage('https://i.imgur.com/9xtLCK7.png')
 
   const button = new MessageButton()
-    .setStyle('SUCCESS') // Estilo verde
+    .setStyle('SUCCESS') 
     .setLabel('Ficar Free Agent')
     .setCustomId('free_agent_button');
 
@@ -53,7 +53,6 @@ async function sendFreeAgentEmbed(client) {
   }
 }
 
-// Chame a função no evento 'messageCreate' quando o comando !botaofreeagent for enviado
 client.on('messageCreate', (message) => {
   if (message.content === 'a') {
     sendFreeAgentEmbed(client);
